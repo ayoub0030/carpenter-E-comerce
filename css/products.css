@@ -274,19 +274,47 @@
         font-size: 0.9rem;
     }
     
-    /* Modified to show only one product per row on mobile */
+    /* Modified to show larger products on mobile */
     .product-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
-        max-width: 300px;
+        gap: 30px;
+        max-width: 90%;
         margin: 0 auto;
     }
     
+    /* Larger product images on mobile */
+    .product-image {
+        height: 300px !important;
+    }
+    
+    /* Larger product info section */
+    .product-info {
+        padding: 20px !important;
+    }
+    
+    .product-info h3 {
+        font-size: 1.4rem !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .price {
+        font-size: 1.3rem !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .rating {
+        font-size: 1.1rem !important;
+    }
+    
+    .rating span {
+        font-size: 1rem !important;
+    }
+    
     .product-tag {
-        font-size: 0.7rem;
-        padding: 4px 8px;
-        top: 10px;
-        left: 10px;
+        font-size: 0.9rem !important;
+        padding: 6px 12px !important;
+        top: 15px !important;
+        left: 15px !important;
     }
     
     .custom-orders-image img {

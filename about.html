@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Tamazight Woodcraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/about-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light-color);
+        }
+        
+        .about-hero-content h2 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        
+        .about-hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        
+        .about-story {
+            padding: 100px 10%;
+            background-color: var(--light-color);
+        }
+        
+        .story-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .story-image {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .story-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .story-image::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid var(--primary-color);
+            z-index: 1;
+            opacity: 0.7;
+            border-radius: 5px;
+        }
+        
+        .story-content h3 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .story-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .story-content p {
+            color: var(--dark-color);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .values-section {
+            padding: 100px 10%;
+            background-color: #f9f5f0;
+        }
+        
+        .values-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .values-header h3 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .values-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--dark-color);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .value-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+        }
+        
+        .value-card h4 {
+            color: var(--dark-color);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        
+        .value-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .team-section {
+            padding: 100px 10%;
+            background-color: var(--light-color);
+        }
+        
+        .team-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .team-header h3 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .team-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--dark-color);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .team-member {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-photo {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .team-member:hover .team-photo img {
+            transform: scale(1.1);
+        }
+        
+        .team-info {
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .team-info h4 {
+            color: var(--dark-color);
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+        
+        .team-info p.position {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .team-info p.bio {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .team-social a {
+            width: 35px;
+            height: 35px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .team-social a:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        /* Timeline Section */
+        .timeline-section {
+            padding: 100px 10%;
+            background-color: #f9f5f0;
+        }
+        
+        .timeline-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .timeline-header h3 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--dark-color);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -12px;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-content h4 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-date {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .timeline-content p {
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        /* Responsive Styles */
+        @media screen and (max-width: 992px) {
+            .story-container,
+            .values-grid,
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item::after {
+                left: 15px;
+                right: auto;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .story-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .story-image {
+                height: 400px;
+                order: 1;
+            }
+            
+            .story-content {
+                order: 2;
+            }
+        }
+        
+        @media screen and (max-width: 576px) {
+            .about-hero {
+                height: 40vh;
+            }
+            
+            .about-hero-content h2 {
+                font-size: 2.5rem;
+            }
+            
+            .values-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-story,
+            .values-section,
+            .team-section,
+            .timeline-section {
+                padding: 60px 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Tamazight Woodcraft Logo" class="logo">
+            <h1>Tamazight <span>Woodcraft</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+       
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <h2>Our Story</h2>
+            <p>Discover the passion and craftsmanship behind Tamazight Woodcraft</p>
+        </div>
+    </section>
+
+    <section class="about-story">
+        <div class="story-container">
+            <div class="story-image">
+                <img src="img/about-story.jpg" alt="Craftsman working on wooden furniture">
+            </div>
+            <div class="story-content">
+                <h3>The Tamazight Woodcraft Story</h3>
+                <p>Founded in 1985 by master craftsman Hassan Amazigh, Tamazight Woodcraft began as a small workshop in the heart of Agadir, Morocco. Drawing inspiration from the rich cultural heritage of the Amazigh people, Hassan combined traditional Berber woodworking techniques with contemporary design principles.</p>
+                <p>For over three decades, we have been dedicated to creating exceptional handcrafted wooden furniture that celebrates the beauty of Amazigh artistry. Each piece we create tells a story of cultural heritage, skilled craftsmanship, and sustainable practices.</p>
+                <p>Today, Tamazight Woodcraft has grown into a renowned furniture atelier, led by the second generation of the Amazigh family. We continue to honor our roots while embracing innovation, creating timeless pieces that bring the spirit of Moroccan craftsmanship into modern homes around the world.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="values-header">
+            <h3>Our Core Values</h3>
+            <p>At Tamazight Woodcraft, our values guide everything we do, from the selection of materials to the final finishing touches on each piece.</p>
+        </div>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-hands"></i>
+                </div>
+                <h4>Craftsmanship</h4>
+                <p>We believe in the power of human hands and traditional techniques. Each piece is meticulously crafted by our skilled artisans who have honed their craft over many years.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <h4>Sustainability</h4>
+                <p>We are committed to responsible sourcing and eco-friendly practices. Our wood comes from sustainable forests, and we strive to minimize waste in our production process.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-history"></i>
+                </div>
+                <h4>Heritage</h4>
+                <p>We honor the rich cultural heritage of the Amazigh people by preserving traditional designs and motifs, ensuring these artistic traditions continue to thrive.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h4>Innovation</h4>
+                <p>While respecting tradition, we embrace innovation and contemporary design, creating furniture that is both timeless and relevant for modern living.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h4>Passion</h4>
+                <p>Our love for woodworking drives us to pursue excellence in everything we create. We pour our hearts into each piece, ensuring it brings joy to its owner for generations.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h4>Community</h4>
+                <p>We believe in supporting our local community by providing employment opportunities and training the next generation of craftspeople in traditional woodworking skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="team-header">
+            <h3>Meet Our Team</h3>
+            <p>The talented artisans and designers behind our beautiful creations.</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="team-photo">
+                    <img src="img/team-1.jpg" alt="Youssef Amazigh">
+                </div>
+                <div class="team-info">
+                    <h4>Youssef Amazigh</h4>
+                    <p class="position">Master Craftsman & Owner</p>
+                    <p class="bio">Son of founder Hassan Amazigh, Youssef has been working with wood since childhood. He leads our workshop with passion and vision.</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="team-photo">
+                    <img src="img/team-2.jpg" alt="Amina Touzani">
+                </div>
+                <div class="team-info">
+                    <h4>Amina Touzani</h4>
+                    <p class="position">Lead Designer</p>
+                    <p class="bio">With a background in interior design, Amina brings fresh perspectives while honoring traditional Amazigh aesthetics.</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="team-photo">
+                    <img src="img/team-3.jpg" alt="Omar Benali">
+                </div>
+                <div class="team-info">
+                    <h4>Omar Benali</h4>
+                    <p class="position">Senior Woodworker</p>
+                    <p class="bio">With over 25 years of experience, Omar specializes in intricate carving and traditional joinery techniques.</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section">
+        <div class="timeline-header">
+            <h3>Our Journey</h3>
+            <p>The milestones that have shaped Tamazight Woodcraft over the years.</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4>The Beginning</h4>
+                    <span class="timeline-date">1985</span>
+                    <p>Hassan Amazigh opens a small woodworking shop in Agadir, focusing on traditional Amazigh furniture designs.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4>First Workshop Expansion</h4>
+                    <span class="timeline-date">1992</span>
+                    <p>Growing demand leads to our first workshop expansion and the hiring of additional craftsmen.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4>International Recognition</h4>
+                    <span class="timeline-date">1998</span>
+                    <p>Our pieces are featured in an international design exhibition in Paris, bringing global attention to Amazigh woodworking.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4>Second Generation</h4>
+                    <span class="timeline-date">2005</span>
+                    <p>Youssef Amazigh joins the family business after completing his studies in furniture design.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4>Sustainable Practices</h4>
+                    <span class="timeline-date">2010</span>
+                    <p>We implement a comprehensive sustainability program, focusing on responsibly sourced materials and eco-friendly finishes.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4>Online Presence</h4>
+                    <span class="timeline-date">2015</span>
+                    <p>Launch of our e-commerce platform, making our handcrafted furniture available to customers worldwide.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h4>Today</h4>
+                    <span class="timeline-date">Present</span>
+                    <p>Continuing our legacy of exceptional craftsmanship while embracing innovation and sustainable practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <img src="img/logo.png" alt="Tamazight Woodcraft Logo" class="footer-logo">
+                <h3>Tamazight Woodcraft</h3>
+                <p>Handcrafted Amazigh furniture pieces made with passion and precision, combining traditional Berber craftsmanship with modern design.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Stay updated with our latest products and offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tamazight Woodcraft. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

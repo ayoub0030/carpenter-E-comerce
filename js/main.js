@@ -35,6 +35,66 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Enhanced Mobile Touch Support for Product Cards
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const productCards = document.querySelectorAll('.product-card');
+    
+    if (isTouchDevice && productCards.length > 0) {
+        productCards.forEach(card => {
+            const overlay = card.querySelector('.product-overlay');
+            const viewButton = card.querySelector('.overlay-btn:first-child');
+            const addToCartButton = card.querySelector('.overlay-btn.add-to-cart');
+            
+            // Make overlay buttons larger on touch devices
+            if (viewButton && addToCartButton) {
+                viewButton.style.width = '50px';
+                viewButton.style.height = '50px';
+                addToCartButton.style.width = '50px';
+                addToCartButton.style.height = '50px';
+            }
+            
+            // First tap shows overlay, second tap activates button
+            card.addEventListener('touchstart', function(e) {
+                if (!overlay.classList.contains('active-touch')) {
+                    e.preventDefault();
+                    // Remove active class from all other cards
+                    productCards.forEach(otherCard => {
+                        if (otherCard !== card) {
+                            const otherOverlay = otherCard.querySelector('.product-overlay');
+                            if (otherOverlay) otherOverlay.classList.remove('active-touch');
+                        }
+                    });
+                    overlay.classList.add('active-touch');
+                }
+            });
+        });
+        
+        // Close active overlay when tapping elsewhere
+        document.addEventListener('touchstart', function(e) {
+            if (!e.target.closest('.product-card')) {
+                productCards.forEach(card => {
+                    const overlay = card.querySelector('.product-overlay');
+                    if (overlay) overlay.classList.remove('active-touch');
+                });
+            }
+        });
+        
+        // Add active-touch style
+        const style = document.createElement('style');
+        style.textContent = `
+            .product-overlay.active-touch {
+                opacity: 1 !important;
+            }
+            
+            @media (max-width: 576px) {
+                .product-overlay .overlay-btn {
+                    margin: 0 8px;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
     // Shopping Cart Functionality
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     const cartCount = document.getElementById('cart-count');

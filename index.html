@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamazight Woodcraft - Handcrafted Berber Carpentry</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Tamazight Woodcraft Logo" class="logo">
+            <h1>Tamazight <span>Woodcraft</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+        </div>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Handcrafted Amazigh Carpentry</h2>
+            <p>Traditional Berber woodworking with modern elegance</p>
+            <a href="products.html" class="btn">Explore Collection</a>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <div class="section-header">
+            <h2>Featured Products</h2>
+            <div class="amazigh-divider"></div>
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/product1.jpg" alt="Amazigh Coffee Table">
+                    <div class="product-overlay">
+                        <a href="product-detail.html?id=1" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="overlay-btn add-to-cart" data-id="1"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Amazigh Coffee Table</h3>
+                    <p class="price">$399.99</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/product2.jpg" alt="Berber-Inspired Cabinet">
+                    <div class="product-overlay">
+                        <a href="product-detail.html?id=2" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="overlay-btn add-to-cart" data-id="2"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Berber-Inspired Cabinet</h3>
+                    <p class="price">$649.99</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/product3.jpg" alt="Tifinagh Carved Stool">
+                    <div class="product-overlay">
+                        <a href="product-detail.html?id=3" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="overlay-btn add-to-cart" data-id="3"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Tifinagh Carved Stool</h3>
+                    <p class="price">$199.99</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/product4.jpg" alt="Amazigh Pattern Bookshelf">
+                    <div class="product-overlay">
+                        <a href="product-detail.html?id=4" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="overlay-btn add-to-cart" data-id="4"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Amazigh Pattern Bookshelf</h3>
+                    <p class="price">$549.99</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="view-all">
+            <a href="products.html" class="btn">View All Products</a>
+        </div>
+    </section>
+
+    <section class="craftsmanship">
+        <div class="section-header">
+            <h2>Our Craftsmanship</h2>
+            <div class="amazigh-divider"></div>
+        </div>
+        <div class="craft-grid">
+            <div class="craft-item">
+                <div class="craft-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Hand-carved Details</h3>
+                <p>Each piece features intricate Amazigh motifs hand-carved by our master craftsmen.</p>
+            </div>
+            <div class="craft-item">
+                <div class="craft-icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <h3>Sustainable Materials</h3>
+                <p>We source only sustainable, locally harvested woods to preserve our environmental heritage.</p>
+            </div>
+            <div class="craft-item">
+                <div class="craft-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Natural Finishes</h3>
+                <p>Traditional oils and waxes derived from ancient Berber techniques protect and enhance the wood.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="section-header">
+            <h2>Customer Testimonials</h2>
+            <div class="amazigh-divider"></div>
+        </div>
+        <div class="testimonial-slider">
+            <div class="testimonial-slide">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">"The Amazigh coffee table I purchased is absolutely stunning. The craftsmanship is impeccable, and it has become the centerpiece of my living room. Every visitor asks about it!"</p>
+                <div class="testimonial-author">
+                    <img src="img/customer1.jpg" alt="Sarah Johnson">
+                    <div class="author-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>New York, USA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with our latest collections and exclusive offers</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Tamazight Woodcraft</h3>
+                <p>We are dedicated to preserving and celebrating Amazigh woodworking traditions while creating functional, beautiful furniture for modern homes.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-etsy"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="about.html#process">Crafting Process</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Artisan Way, Timezrit, Morocco</li>
+                    <li><i class="fas fa-phone"></i> +212 5555-1234</li>
+                    <li><i class="fas fa-envelope"></i> info@tamazightwoodcraft.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tamazight Woodcraft. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

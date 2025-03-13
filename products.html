@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Tamazight Woodcraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Tamazight Woodcraft Logo" class="logo">
+            <h1>Tamazight <span>Woodcraft</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+        </div>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <section class="products-hero">
+        <div class="products-hero-content">
+            <h2>Our Collection</h2>
+            <p>Discover handcrafted Amazigh furniture pieces made with passion and precision</p>
+        </div>
+    </section>
+
+    <section class="product-catalog">
+        <div class="filter-controls">
+            <div class="filter-widget">
+                <h3>Categories</h3>
+                <ul class="filter-list">
+                    <li data-filter="all" class="active">All Products</li>
+                    <li data-filter="tables">Tables</li>
+                    <li data-filter="chairs">Chairs & Stools</li>
+                    <li data-filter="storage">Storage & Shelving</li>
+                    <li data-filter="decor">Home Decor</li>
+                </ul>
+            </div>
+            
+            <div class="filter-widget">
+                <h3>Price Range</h3>
+                <div class="price-slider">
+                    <input type="range" min="0" max="2000" value="2000" class="price-range" id="max-price">
+                    <div class="price-labels">
+                        <span>$0</span>
+                        <span id="price-value">$2000+</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="filter-widget">
+                <h3>Sort By</h3>
+                <select id="sort-select">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name-asc">Name: A to Z</option>
+                    <option value="name-desc">Name: Z to A</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="product-grid-container">
+            <div class="product-count">
+                <p>Showing <span id="products-shown">12</span> of <span id="products-total">24</span> products</p>
+            </div>
+            <div class="product-grid">
+                <!-- Table Products -->
+                <div class="product-card" data-category="tables" data-price="399.99">
+                    <div class="product-image">
+                        <span class="product-tag">Best Seller</span>
+                        <img src="img/product1.jpg" alt="Amazigh Coffee Table">
+                        <div class="product-overlay">
+                            <a href="product-detail.html?id=1" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart" data-id="1"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Amazigh Coffee Table</h3>
+                        <p class="price">$399.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(28)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="tables" data-price="599.99">
+                    <div class="product-image">
+                        <img src="img/product5.jpg" alt="Tifinagh Dining Table">
+                        <div class="product-overlay">
+                            <a href="product-detail.html?id=5" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart" data-id="5"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tifinagh Dining Table</h3>
+                        <p class="price">$599.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(15)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="tables" data-price="449.99">
+                    <div class="product-image">
+                        <img src="img/product9.jpg" alt="Berber Side Table">
+                        <div class="product-overlay">
+                            <a href="product-detail.html?id=9" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart" data-id="9"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Berber Side Table</h3>
+                        <p class="price">$449.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(19)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chairs & Stools -->
+                <div class="product-card" data-category="chairs" data-price="199.99">
+                    <div class="product-image">
+                        <img src="img/product3.jpg" alt="Tifinagh Carved Stool">
+                        <div class="product-overlay">
+                            <a href="product-detail.html?id=3" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart" data-id="3"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tifinagh Carved Stool</h3>
+                        <p class="price">$199.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(23)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="chairs" data-price="349.99">
+                    <div class="product-image">
+                        <span class="product-tag">New</span>
+                        <img src="img/product6.jpg" alt="Amazigh Dining Chair">
+                        <div class="product-overlay">
+                            <a href="product-detail.html?id=6" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart" data-id="6"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Amazigh Dining Chair</h3>
+                        <p class="price">$349.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <span>(8)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="chairs" data-price="499.99">
+                    <div class="product-image">
+                        <img src="img/product10.jpg" alt="Berber Rocking Chair">
+                        <div class="product-overlay">
+                            <a href="product-detail.html?id=10" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart" data-id="10"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Berber Rocking Chair</h3>
+                        <p class="price">$499.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(12)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Storage & Shelving -->
+                <div class="product-card" data-category="storage" data-price="649.99">
+                    <div class="product-image">
+                        <img src="img/product2.jpg" alt="Berber-Inspired Cabinet">
+                        <div class="product-overlay">
+                            <a href="product-detail.html?id=2" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart" data-id="2"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Berber-Inspired Cabinet</h3>
+                        <p class="price">$649.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(31)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="storage" data-price="549.99">
+                    <div class="product-image">
+                        <img src="img/product4.jpg" alt="Amazigh Pattern Bookshelf">
+                        <div class="product-overlay">
+                            <a href="product-detail.html?id=4" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart" data-id="4"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Amazigh Pattern Bookshelf</h3>
+                        <p class="price">$549.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(17)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="storage" data-price="799.99">
+                    <div class="product-image">
+                        <span class="product-tag">Sale</span>
+                        <img src="img/product11.jpg" alt="Tifinagh Storage Console">
+                        <div class="product-overlay">
+                            <a href="product-detail.html?id=11" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart" data-id="11"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tifinagh Storage Console</h3>
+                        <p class="price"><span class="old-price">$899.99</span> $799.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(14)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Decor -->
+                <div class="product-card" data-category="decor" data-price="149.99">
+                    <div class="product-image">
+                        <img src="img/product7.jpg" alt="Amazigh Wall Mirror">
+                        <div class="product-overlay">
+                            <a href="product-detail.html?id=7" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart" data-id="7"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Amazigh Wall Mirror</h3>
+                        <p class="price">$149.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(22)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="decor" data-price="99.99">
+                    <div class="product-image">
+                        <img src="img/product8.jpg" alt="Berber Wooden Tray">
+                        <div class="product-overlay">
+                            <a href="product-detail.html?id=8" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart" data-id="8"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Berber Wooden Tray</h3>
+                        <p class="price">$99.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(29)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="decor" data-price="129.99">
+                    <div class="product-image">
+                        <img src="img/product12.jpg" alt="Tifinagh Wall Art">
+                        <div class="product-overlay">
+                            <a href="product-detail.html?id=12" class="overlay-btn"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="overlay-btn add-to-cart" data-id="12"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tifinagh Wall Art</h3>
+                        <p class="price">$129.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(16)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#" class="next">Next <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="custom-orders">
+        <div class="custom-orders-content">
+            <div class="custom-orders-image">
+                <img src="img/custom-order.jpg" alt="Custom Woodworking">
+            </div>
+            <div class="custom-orders-text">
+                <h2>Custom Orders</h2>
+                <div class="amazigh-divider"></div>
+                <p>Looking for something unique? We specialize in custom-designed Amazigh furniture pieces tailored to your specific requirements and preferences.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Personalized designs with authentic Amazigh motifs</li>
+                    <li><i class="fas fa-check"></i> Choice of sustainable woods and natural finishes</li>
+                    <li><i class="fas fa-check"></i> Expert consultation throughout the creation process</li>
+                    <li><i class="fas fa-check"></i> Nationwide delivery of your custom masterpiece</li>
+                </ul>
+                <a href="contact.html" class="btn">Request a Custom Order</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Tamazight Woodcraft</h3>
+                <p>We are dedicated to preserving and celebrating Amazigh woodworking traditions while creating functional, beautiful furniture for modern homes.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-etsy"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="about.html#process">Crafting Process</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Artisan Way, Timezrit, Morocco</li>
+                    <li><i class="fas fa-phone"></i> +212 5555-1234</li>
+                    <li><i class="fas fa-envelope"></i> info@tamazightwoodcraft.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tamazight Woodcraft. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
